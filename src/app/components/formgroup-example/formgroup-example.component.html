@@ -1,0 +1,39 @@
+<div class="tc">
+    <form [formGroup]='userProfile' (ngSubmit)="onSubmit()" >
+        <label for="userName">username:
+            <input type="text" formControlName="userName">
+        </label>
+        <br>
+    
+        <label for="password">password:
+            <input type="password" formControlName="password">
+        </label>
+        <br>
+        <label for="email">email:
+            <input type="email" formControlName="email">
+        </label>
+        <br>
+        <label for="contact">contact:
+            <input type="text" formControlName="contact">
+        </label>
+        <br>
+        <div formGroupName='address'><h5>Address</h5><br>
+            <label for="city">city:
+                <input type="text" formControlName="city">
+            </label>
+            <label for="state">state:
+                <input type="text" formControlName="state">
+            </label>
+            <label for="pincode">pincode:
+                <input type="text" formControlName="pincode">
+            </label>
+
+
+        </div>
+
+
+        <button type="submit"[disabled]="!userProfile.valid">submit</button>
+    
+    </form>
+</div>
+
